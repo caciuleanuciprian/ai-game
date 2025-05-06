@@ -1,5 +1,6 @@
 import { MAIN_WORDS_LIST } from "@/utils/const";
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Flex, Text } from "@chakra-ui/react";
+import { Draggable } from "./Draggable";
 
 export const SideBar = () => {
 	return (
@@ -7,9 +8,9 @@ export const SideBar = () => {
 			<SideBarTitle />
 			<Flex gap="2" flexWrap="wrap">
 				{MAIN_WORDS_LIST.map((word) => (
-					<Button key={word} width="min-content">
+					<Draggable key={word} id={word}>
 						{word}
-					</Button>
+					</Draggable>
 				))}
 			</Flex>
 		</Flex>
